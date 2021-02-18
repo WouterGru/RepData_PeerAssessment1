@@ -163,7 +163,7 @@ In order to make the histogram downloadable, the following code can be executed:
 
 
 ```r
-png("./figures/Histogram of Steps.png")
+png("./figures/Plot1.png")
 final_histogram
 dev.off()
 ```
@@ -171,10 +171,10 @@ dev.off()
 
 ```r
 library(knitr)
-include_graphics("./figures/Histogram of Steps.png")
+include_graphics("./figures/Plot1.png")
 ```
 
-![](./figures/Histogram of Steps.png)<!-- -->
+![](./figures/Plot1.png)<!-- -->
 
 
 
@@ -236,17 +236,17 @@ In order to make the time series downloadable, the following code can be execute
 
 
 ```r
-png("./figures/Time Series of Steps.png")
+png("./figures/Plot2.png")
 final_time_series
 dev.off()
 ```
 
 
 ```r
-include_graphics("./figures/Time Series of Steps.png")
+include_graphics("./figures/Plot2.png")
 ```
 
-![](./figures/Time Series of Steps.png)<!-- -->
+![](./figures/Plot2.png)<!-- -->
 
 
 
@@ -395,17 +395,17 @@ In order to make the histogram downloadable, the following code can be executed:
 
 
 ```r
-png("./figures/Histogram of Steps (FULL DATA).png")
+png("./figures/Plot3.png")
 histogram_full_final
 dev.off()
 ```
 
 
 ```r
-include_graphics("./figures/Histogram of Steps (FULL DATA).png")
+include_graphics("./figures/Plot3.png")
 ```
 
-![](./figures/Histogram of Steps (FULL DATA).png)<!-- -->
+![](./figures/Plot3.png)<!-- -->
 
 The mean and median are calculated through the folowwing chunck of code: 
 
@@ -513,17 +513,17 @@ In order to make the panel plot downloadable, the following code can be executed
 
 
 ```r
-png("./figures/Panel Plot of Weekdays vs Weekends.png")
+png("./figures/Plot4.png")
 panel_plot_final
 dev.off()
 ```
 
 
 ```r
-include_graphics("./figures/Panel Plot of Weekdays vs Weekends.png")
+include_graphics("./figures/Plot4.png")
 ```
 
-![](./figures/Panel Plot of Weekdays vs Weekends.png)<!-- -->
+![](./figures/Plot4.png)<!-- -->
 
 
 
