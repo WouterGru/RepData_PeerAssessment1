@@ -21,12 +21,13 @@ unzip("activity.zip")
 data_activity <- read.csv("activity.csv")
 ```
 
-Two libaries (*ggplot2* and *dplyr*) are loaded through the chunck of code below. 
+Three libaries (*ggplot2*, *knitr* and *dplyr*) are loaded through the chunck of code below. 
 
 
 ```r
 library(dplyr)
 library(ggplot2)
+library(knitr)
 ```
 
 The data consists out of three variables. These being the following: 
@@ -162,10 +163,18 @@ In order to make the histogram downloadable, the following code can be executed:
 
 
 ```r
-png("Histogram of Steps.png")
+png("./figures/Histogram of Steps.png")
 final_histogram
 dev.off()
 ```
+
+
+```r
+library(knitr)
+include_graphics("./figures/Histogram of Steps.png")
+```
+
+![](./figures/Histogram of Steps.png)<!-- -->
 
 
 
@@ -221,16 +230,23 @@ final_time_series <- time_series + geom_line(col = "purple") + ggtitle("Average 
 final_time_series
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 In order to make the time series downloadable, the following code can be executed:
 
 
 ```r
-png("Time Series of Steps.png")
+png("./figures/Time Series of Steps.png")
 final_time_series
 dev.off()
 ```
+
+
+```r
+include_graphics("./figures/Time Series of Steps.png")
+```
+
+![](./figures/Time Series of Steps.png)<!-- -->
 
 
 
@@ -373,16 +389,23 @@ histogram_full_final
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 In order to make the histogram downloadable, the following code can be executed:
 
 
 ```r
-png("Histogram of Steps (FULL DATA).png")
+png("./figures/Histogram of Steps (FULL DATA).png")
 histogram_full_final
 dev.off()
 ```
+
+
+```r
+include_graphics("./figures/Histogram of Steps (FULL DATA).png")
+```
+
+![](./figures/Histogram of Steps (FULL DATA).png)<!-- -->
 
 The mean and median are calculated through the folowwing chunck of code: 
 
@@ -484,17 +507,23 @@ panel_plot_final <- panel_plot + geom_line(col = "purple") + ggtitle("Average St
 panel_plot_final
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
 
 In order to make the panel plot downloadable, the following code can be executed:
 
 
 ```r
-png("Panel Plot of Weekdays vs Weekends.png")
+png("./figures/Panel Plot of Weekdays vs Weekends.png")
 panel_plot_final
 dev.off()
 ```
 
+
+```r
+include_graphics("./figures/Panel Plot of Weekdays vs Weekends.png")
+```
+
+![](./figures/Panel Plot of Weekdays vs Weekends.png)<!-- -->
 
 
 

@@ -20,11 +20,12 @@ unzip("activity.zip")
 data_activity <- read.csv("activity.csv")
 ```
 
-Two libaries (*ggplot2* and *dplyr*) are loaded through the chunck of code below. 
+Three libaries (*ggplot2*, *knitr* and *dplyr*) are loaded through the chunck of code below. 
 
 ```{r, eval = FALSE}
 library(dplyr)
 library(ggplot2)
+library(knitr)
 ```
 
 The data consists out of three variables. These being the following: 
@@ -78,10 +79,15 @@ final_histogram
 In order to make the histogram downloadable, the following code can be executed:
 
 ```{r, eval = FALSE}
-png("Histogram of Steps.png")
+png("./figures/Histogram of Steps.png")
 final_histogram
 dev.off()
 ````
+
+```{r, echo = TRUE}
+library(knitr)
+include_graphics("./figures/Histogram of Steps.png")
+```
 
 
 
@@ -127,9 +133,13 @@ final_time_series
 In order to make the time series downloadable, the following code can be executed:
 
 ```{r, eval = FALSE}
-png("Time Series of Steps.png")
+png("./figures/Time Series of Steps.png")
 final_time_series
 dev.off()
+```
+
+```{r, echo = TRUE}
+include_graphics("./figures/Time Series of Steps.png")
 ```
 
 
@@ -210,9 +220,13 @@ histogram_full_final
 In order to make the histogram downloadable, the following code can be executed:
 
 ```{r, eval = FALSE}
-png("Histogram of Steps (FULL DATA).png")
+png("./figures/Histogram of Steps (FULL DATA).png")
 histogram_full_final
 dev.off()
+```
+
+```{r, echo = TRUE}
+include_graphics("./figures/Histogram of Steps (FULL DATA).png")
 ```
 
 The mean and median are calculated through the folowwing chunck of code: 
@@ -278,11 +292,14 @@ panel_plot_final
 In order to make the panel plot downloadable, the following code can be executed:
 
 ```{r, eval = FALSE}
-png("Panel Plot of Weekdays vs Weekends.png")
+png("./figures/Panel Plot of Weekdays vs Weekends.png")
 panel_plot_final
 dev.off()
 ```
 
+```{r, echo = TRUE}
+include_graphics("./figures/Panel Plot of Weekdays vs Weekends.png")
+```
 
 
 
